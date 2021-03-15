@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-extension CarsomeIntExtension on int {
+extension AirIntExtension on int {
   Widget get gapRow => SizedBox(
         width: this.toDouble(),
       );

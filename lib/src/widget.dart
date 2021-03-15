@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-extension WidgetExtension on Widget {
+extension AirWidgetExtension on Widget {
   Widget onTap(void onTap()) {
     return InkWell(
       child: this,
@@ -90,7 +90,7 @@ extension WidgetExtension on Widget {
   }
 }
 
-extension WidgetsExtension on WidgetExtensionModel {
+extension AirWidgetsExtension on WidgetExtensionModel {
   WidgetExtensionModel toTap(void onTap()) {
     this.onTap = onTap;
     return this;

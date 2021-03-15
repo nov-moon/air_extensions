@@ -1,4 +1,4 @@
-extension MapExtension<K, V> on Map<K, V> {
+extension AirMapExtension<K, V> on Map<K, V> {
   /// Map's extension is used to do for each.
   ///
   /// The invoke param [fun] can return noting, or return a bool.
@@ -84,7 +84,7 @@ extension MapExtension<K, V> on Map<K, V> {
       .map((key, value) => MapEntry(key.toString(), value?.toString() ?? ''));
 }
 
-extension IterableExtension<E> on Iterable<E> {
+extension AirIterableExtension<E> on Iterable<E> {
   /// Find the first element as [T]
   ///
   /// It will return null if no element's type is [T]。

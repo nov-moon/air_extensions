@@ -3,7 +3,7 @@ import 'dart:ui';
 
 import 'package:air_extensions/src/extension_config.dart';
 
-extension StringExtension on String {
+extension AirStringExtension on String {
   /// 当前对象是否是Http路径
   bool get isPathHttp =>
       this.startsWith('http://') || this.startsWith('https://');
@@ -21,10 +21,10 @@ extension StringExtension on String {
   Uri get asUri => Uri.parse(this);
 
   /// convert the string to a Color
-  Color get color => HexColor(this);
+  Color get color => AirHexColor(this);
 }
 
-class HexColor extends Color {
+class AirHexColor extends Color {
   static int _getColorFromHex(String hexColor) {
     hexColor = hexColor.toUpperCase().replaceAll("#", "");
     if (hexColor.length == 6) {
@@ -33,5 +33,5 @@ class HexColor extends Color {
     return int.parse(hexColor, radix: 16);
   }
 
-  HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
+  AirHexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
