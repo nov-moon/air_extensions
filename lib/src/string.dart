@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui';
 
 import 'package:air_extensions/src/extension_config.dart';
 
@@ -18,4 +19,19 @@ extension StringExtension on String {
 
   /// 将当前做Uri
   Uri get asUri => Uri.parse(this);
+
+  /// convert the string to a Color
+  Color get color => HexColor(this);
+}
+
+class HexColor extends Color {
+  static int _getColorFromHex(String hexColor) {
+    hexColor = hexColor.toUpperCase().replaceAll("#", "");
+    if (hexColor.length == 6) {
+      hexColor = "FF" + hexColor;
+    }
+    return int.parse(hexColor, radix: 16);
+  }
+
+  HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
