@@ -1,3 +1,4 @@
+import 'package:air_extensions/src/string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -24,10 +25,56 @@ extension AirWidgetExtension on Widget {
     );
   }
 
-  Widget center() {
-    return Center(
+  Widget center({Alignment alignment = Alignment.center}) {
+    return Align(
+      child: this,
+      alignment: alignment,
+    );
+  }
+
+  Widget visible(bool visible) {
+    return Visibility(
+      child: this,
+      visible: visible,
+    );
+  }
+
+  Widget padding({double? l, double? r, double? t, double? b}) {
+    return Padding(
+      padding: EdgeInsets.only(
+        left: l ?? 0,
+        right: r ?? 0,
+        top: t ?? 0,
+        bottom: b ?? 0,
+      ),
       child: this,
     );
+  }
+
+  Widget paddingAll(double padding) {
+    return Padding(
+      padding: EdgeInsets.all(padding),
+      child: this,
+    );
+  }
+
+  Widget paddingBoth({double? lr, double? tb}) {
+    return padding(l: lr, r: lr, t: tb, b: tb);
+  }
+
+  Widget border(String color,
+      {double? width, double? radius, bool isFill = false}) {
+    var c = color.color;
+    var border = RoundedRectangleBorder(
+        side: BorderSide(
+      width: width ?? 1,
+      color: c,
+    ));
+    var decoration = ShapeDecoration(
+      shape: border,
+      color: isFill ? c : null,
+    );
+    return DecoratedBox(decoration: decoration, child: this);
   }
 
   WidgetExtensionModel toTap(void onTap()) {
