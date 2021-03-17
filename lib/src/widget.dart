@@ -1,61 +1,80 @@
 import 'package:air_extensions/src/string.dart';
+import 'package:air_extensions/src/util/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 extension AirWidgetExtension on Widget {
+  Widget debug() {
+    return fixWidget(
+        this,
+        (child) => ColoredBox(
+              color: Colors.red,
+              child: child,
+            ));
+  }
+
   Widget onTap(void onTap()) {
-    return InkWell(
-      child: this,
-      onTap: onTap,
-    );
+    return fixWidget(
+        this,
+        (child) => InkWell(
+              child: child,
+              onTap: onTap,
+            ));
   }
 
   Widget background(Color color) {
-    return ColoredBox(
-      color: color,
-      child: this,
-    );
+    return fixWidget(
+        this,
+        (child) => ColoredBox(
+              color: color,
+              child: child,
+            ));
   }
 
   Widget size({double? width, double? height}) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: this,
-    );
+    return fixWidget(
+        this,
+        (child) => SizedBox(
+              width: width,
+              height: height,
+              child: child,
+            ));
   }
 
   Widget center({Alignment alignment = Alignment.center}) {
-    return Align(
-      child: this,
-      alignment: alignment,
-    );
+    return fixWidget(
+        this,
+        (child) => Align(
+              child: child,
+              alignment: alignment,
+            ));
   }
 
   Widget visible(bool visible) {
-    return Visibility(
-      child: this,
-      visible: visible,
-    );
+    return fixWidget(
+        this,
+        (child) => Visibility(
+              child: child,
+              visible: visible,
+            ));
   }
 
   Widget padding({double? l, double? r, double? t, double? b}) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: l ?? 0,
-        right: r ?? 0,
-        top: t ?? 0,
-        bottom: b ?? 0,
-      ),
-      child: this,
-    );
+    return fixWidget(
+        this,
+        (child) => Padding(
+              padding: EdgeInsets.only(
+                left: l ?? 0,
+                right: r ?? 0,
+                top: t ?? 0,
+                bottom: b ?? 0,
+              ),
+              child: child,
+            ));
   }
 
   Widget paddingAll(double padding) {
-    return Padding(
-      padding: EdgeInsets.all(padding),
-      child: this,
-    );
+    return this.padding(l: padding, r: padding, t: padding, b: padding);
   }
 
   Widget paddingBoth({double? lr, double? tb}) {
@@ -74,7 +93,9 @@ extension AirWidgetExtension on Widget {
       shape: border,
       color: isFill ? c : null,
     );
-    return DecoratedBox(decoration: decoration, child: this);
+
+    return fixWidget(
+        this, (child) => DecoratedBox(decoration: decoration, child: child));
   }
 
   WidgetExtensionModel toTap(void onTap()) {
