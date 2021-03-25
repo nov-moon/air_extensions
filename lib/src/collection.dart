@@ -3,9 +3,9 @@ extension AirMapExtension<K, V> on Map<K, V> {
   ///
   /// The invoke param [fun] can return noting, or return a bool.
   /// If [fun] return a bool and the bool is false, the for each will be broke.
-  void foreach(Function(K key, V value) fun) {
+  void foreach(Function(K key, V? value) fun) {
     for (var k in this.keys) {
-      final result = fun(k, this[k]!);
+      final result = fun(k, this[k]);
       if (result != null && result is bool && !result) {
         break;
       }
@@ -15,13 +15,13 @@ extension AirMapExtension<K, V> on Map<K, V> {
   /// To copy a map by old map.
   ///
   /// If you need a deep copy, you can provide the [deepCopy] to do those.
-  Map<K, V> copy({MapEntry Function(K key, V value)? deepCopy}) {
+  Map<K, V> copy({MapEntry Function(K key, V? value)? deepCopy}) {
     final resultMap = <K, V>{};
     for (var k in this.keys) {
       final v = this[k];
       MapEntry result;
       if (deepCopy != null) {
-        result = deepCopy(k, v!);
+        result = deepCopy(k, v);
       } else {
         result = MapEntry(k, v);
       }
