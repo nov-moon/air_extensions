@@ -5,12 +5,18 @@ import 'package:flutter/widgets.dart';
 
 extension AirWidgetExtension on Widget {
   Widget debug() {
-    return fixWidget(
-        this,
-        (child) => ColoredBox(
-              color: Colors.red,
-              child: child,
-            ));
+    var widget = this;
+    assert(() {
+      widget = fixWidget(
+          this,
+          (child) => ColoredBox(
+                color: Colors.red,
+                child: child,
+              ));
+      return true;
+    }());
+
+    return widget;
   }
 
   Widget onTap(void onTap()) {
