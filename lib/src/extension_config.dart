@@ -8,6 +8,7 @@ enum TextStyleEnum {
   titleDefault,
   subtitle1,
   subtitle2,
+  subtitle3,
   body1,
   body2,
   caption1,

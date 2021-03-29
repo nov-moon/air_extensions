@@ -8,6 +8,8 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _subtitle1;
     case TextStyleEnum.subtitle2:
       return _subtitle2;
+    case TextStyleEnum.subtitle3:
+      return _subtitle3;
     case TextStyleEnum.body1:
       return _body1;
     case TextStyleEnum.body2:
@@ -31,7 +33,7 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
   }
 }
 
-String? _fontFamily;
+String? _fontFamily = 'Roboto';
 
 TextStyle _titleDefault = TextStyle(
     fontFamily: _fontFamily,
@@ -47,6 +49,12 @@ TextStyle _subtitle2 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w400,
+    letterSpacing: 0.15);
+
+TextStyle _subtitle3 = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
     letterSpacing: 0.15);
 
 TextStyle _body1 = TextStyle(
