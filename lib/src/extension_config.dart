@@ -20,6 +20,9 @@ enum TextStyleEnum {
   h3
 }
 
+
+
+
 typedef TextStyleFactory = TextStyle Function(TextStyleEnum, int);
 
 class AirExtConfig {
