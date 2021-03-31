@@ -27,81 +27,188 @@ extension AirStringExtension on String {
 
 extension AirStringTxtExtension on String {
   /// Text 18 w600 0.5
-  Text txtTitle({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.titleDefault, type);
+  Text txtTitle({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.titleDefault, type, softWrap, overflow);
   }
 
   /// Text 14 w500 0.1
-  Text txtSubtitle1({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.subtitle1, type);
+  Text txtSubtitle1({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.subtitle1, type, softWrap, overflow);
   }
 
   /// Text 16 w400 0.15
-  Text txtSubtitle2({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.subtitle2, type);
+  Text txtSubtitle2({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.subtitle2, type, softWrap, overflow);
   }
 
   /// Text 16 w500 0.15
-  Text txtSubtitle3({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.subtitle3, type);
+  Text txtSubtitle3({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.subtitle3, type, softWrap, overflow);
   }
 
   /// Text 16 w400 0.5
-  Text txtBody1({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.body1, type);
+  Text txtBody1({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.body1, type, softWrap, overflow);
   }
 
   /// Text 14 w400 0.25
-  Text txtBody2({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.body2, type);
+  Text txtBody2({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.body2, type, softWrap, overflow);
   }
 
   /// Text 12 w400 0.4
-  Text txtCaption1({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.caption1, type);
+  Text txtCaption1({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.caption1, type, softWrap, overflow);
   }
 
   /// Text 12 w500 0.4
-  Text txtCaption2({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.caption2, type);
+  Text txtCaption2({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.caption2, type, softWrap, overflow);
   }
 
   /// Text 10 w400 0.5
-  Text txtOverLine({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.overLine, type);
+  Text txtOverLine({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.overLine, type, softWrap, overflow);
   }
 
   /// Text 14 w600 1  height:18
-  Text txtButton1({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.button1, type);
+  Text txtButton1({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.button1, type, softWrap, overflow);
   }
 
   /// Text 14 w400 0.5  height:18
-  Text txtButton2({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.button2, type);
+  Text txtButton2({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.button2, type, softWrap, overflow);
   }
 
   /// Text 32 w500 ..  height:43
-  Text txtH1({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.h1, type);
+  Text txtH1({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(color, textStyle, TextStyleEnum.h1, type, softWrap, overflow);
   }
 
   /// Text 24 w500 ..  height:32
-  Text txtH2({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.h2, type);
+  Text txtH2({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(color, textStyle, TextStyleEnum.h2, type, softWrap, overflow);
   }
 
   /// Text 20 w500 ..  height:27
-  Text txtH3({Color? color, int type = 0, TextStyle? textStyle}) {
-    return _txt(color, textStyle, TextStyleEnum.h3, type);
+  Text txtH3({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(color, textStyle, TextStyleEnum.h3, type, softWrap, overflow);
   }
 
-  Text _txt(Color? color, TextStyle? textStyle, TextStyleEnum e, int type) {
+  Text _txt(
+    Color? color,
+    TextStyle? textStyle,
+    TextStyleEnum e,
+    int type,
+    bool softWrap,
+    TextOverflow? overflow,
+  ) {
     var style = textStyle ?? AirExtConfig.textStyleFactory(e, type);
     if (color != null) {
       style = style.copyWith(color: color);
     }
-    var widget = Text(this, style: style);
+    var widget = Text(
+      this,
+      style: style,
+      softWrap: softWrap,
+      overflow: overflow,
+    );
 
     return widget;
   }
