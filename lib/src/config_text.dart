@@ -26,6 +26,8 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _button1;
     case TextStyleEnum.button2:
       return _button2;
+    case TextStyleEnum.button3:
+      return _button3;
     case TextStyleEnum.h1:
       return _h1;
     case TextStyleEnum.h2:
@@ -101,6 +103,11 @@ TextStyle _button2 = TextStyle(
     fontWeight: FontWeight.w400,
     height: 18,
     letterSpacing: 0.5);
+TextStyle _button3 = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    );
 TextStyle _h1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 32,

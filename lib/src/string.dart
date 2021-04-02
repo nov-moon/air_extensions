@@ -170,6 +170,18 @@ extension AirStringTxtExtension on String {
         color, textStyle, TextStyleEnum.button2, type, softWrap, overflow);
   }
 
+  /// Text 18 w700
+  Text txtButton3({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.button3, type, softWrap, overflow);
+  }
+
   /// Text 32 w500 ..  height:43
   Text txtH1({
     Color? color,

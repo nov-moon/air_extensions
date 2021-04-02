@@ -17,6 +17,7 @@ enum TextStyleEnum {
   overLine,
   button1,
   button2,
+  button3,
   h1,
   h2,
   h3
