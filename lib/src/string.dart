@@ -98,6 +98,18 @@ extension AirStringTxtExtension on String {
         color, textStyle, TextStyleEnum.body2, type, softWrap, overflow);
   }
 
+  /// Text 14 w400 0.2
+  Text txtBody3({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.body2, type, softWrap, overflow);
+  }
+
   /// Text 12 w400 0.4
   Text txtCaption1({
     Color? color,

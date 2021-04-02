@@ -11,6 +11,7 @@ enum TextStyleEnum {
   subtitle3,
   body1,
   body2,
+  body3,
   caption1,
   caption2,
   overLine,

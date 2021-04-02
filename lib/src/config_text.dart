@@ -14,6 +14,8 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _body1;
     case TextStyleEnum.body2:
       return _body2;
+    case TextStyleEnum.body3:
+      return _body3;
     case TextStyleEnum.caption1:
       return _caption1;
     case TextStyleEnum.caption2:
@@ -67,7 +69,11 @@ TextStyle _body2 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     letterSpacing: 0.25);
-
+TextStyle _body3 = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.2);
 TextStyle _caption1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 12,
