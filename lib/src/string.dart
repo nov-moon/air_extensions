@@ -73,6 +73,17 @@ extension AirStringTxtExtension on String {
     return _txt(
         color, textStyle, TextStyleEnum.subtitle3, type, softWrap, overflow);
   }
+  /// Text 14 w500 0.2
+  Text txtSubtitle4({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.subtitle4, type, softWrap, overflow);
+  }
 
   /// Text 16 w400 0.5
   Text txtBody1({
