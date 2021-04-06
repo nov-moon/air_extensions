@@ -7,6 +7,7 @@ part 'config_text.dart';
 enum TextStyleEnum {
   titleDefault,
   title1,
+  title2,
   subtitle1,
   subtitle2,
   subtitle3,

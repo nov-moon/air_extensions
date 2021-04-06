@@ -6,6 +6,8 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _titleDefault;
     case TextStyleEnum.title1:
       return _title1;
+    case TextStyleEnum.title2:
+      return _title2;
     case TextStyleEnum.subtitle1:
       return _subtitle1;
     case TextStyleEnum.subtitle2:
@@ -52,6 +54,11 @@ TextStyle _title1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 18,
     fontWeight: FontWeight.w500,
+    letterSpacing: 0.2);
+TextStyle _title2 = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
     letterSpacing: 0.2);
 TextStyle _subtitle1 = TextStyle(
     fontFamily: _fontFamily,
