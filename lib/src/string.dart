@@ -37,6 +37,7 @@ extension AirStringTxtExtension on String {
     return _txt(
         color, textStyle, TextStyleEnum.titleDefault, type, softWrap, overflow);
   }
+
   /// Text 18 w500 0.2
   Text txtTitle1({
     Color? color,
@@ -60,7 +61,6 @@ extension AirStringTxtExtension on String {
     return _txt(
         color, textStyle, TextStyleEnum.title2, type, softWrap, overflow);
   }
-
 
   /// Text 14 w500 0.1
   Text txtSubtitle1({
@@ -97,6 +97,7 @@ extension AirStringTxtExtension on String {
     return _txt(
         color, textStyle, TextStyleEnum.subtitle3, type, softWrap, overflow);
   }
+
   /// Text 14 w500 0.2
   Text txtSubtitle4({
     Color? color,
@@ -248,6 +249,34 @@ extension AirStringTxtExtension on String {
     TextOverflow? overflow,
   }) {
     return _txt(color, textStyle, TextStyleEnum.h3, type, softWrap, overflow);
+  }
+
+  Text txt({
+    Color? color,
+    double? size,
+    double? wordSpacing,
+    double? letterSpacing,
+    double? height,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    var style = AirExtConfig.textStyleFactory(TextStyleEnum.body2, 0);
+
+    style = style.copyWith(
+        fontSize: size,
+        color: color,
+        wordSpacing: wordSpacing,
+        height: height,
+        letterSpacing: letterSpacing);
+
+    var widget = Text(
+      this,
+      style: style,
+      softWrap: softWrap,
+      overflow: overflow,
+    );
+
+    return widget;
   }
 
   Text _txt(

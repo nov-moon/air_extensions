@@ -37,14 +37,17 @@ extension AirWidgetExtension on Widget {
             ));
   }
 
-  Widget size({double? width, double? height}) {
-    return fixWidget(
-        this,
-        (child) => SizedBox(
-              width: width,
-              height: height,
-              child: child,
-            ));
+  Widget size({double? width, double? height, bool useCenter = true}) {
+    return fixWidget(this, (child) {
+      Widget w = ConstrainedBox(
+        constraints: BoxConstraints.tightFor(width: width, height: height),
+        child: child,
+      );
+      if (useCenter) {
+        w = w.center();
+      }
+      return w;
+    });
   }
 
   Widget center({Alignment alignment = Alignment.center}) {
