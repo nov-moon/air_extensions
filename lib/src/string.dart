@@ -257,6 +257,7 @@ extension AirStringTxtExtension on String {
     double? wordSpacing,
     double? letterSpacing,
     double? height,
+    FontWeight? fontWeight,
     bool softWrap = true,
     TextOverflow? overflow,
   }) {
@@ -267,6 +268,7 @@ extension AirStringTxtExtension on String {
         color: color,
         wordSpacing: wordSpacing,
         height: height,
+        fontWeight: fontWeight,
         letterSpacing: letterSpacing);
 
     var widget = Text(

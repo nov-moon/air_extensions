@@ -99,4 +99,13 @@ extension AirIterableExtension<E> on Iterable<E> {
     }
     return null;
   }
+
+  Iterable<R> mapIndex<R>(R function(E e, int i)) {
+    var index = 0;
+    return this.map((e) {
+      var r = function(e, index);
+      index++;
+      return r;
+    });
+  }
 }
