@@ -44,85 +44,85 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
 }
 
 String? _fontFamily = 'Roboto';
-
+//去掉了所有的字间距
 TextStyle _titleDefault = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 18,
     fontWeight: FontWeight.w600,
-    letterSpacing: 0.5);
+);
 TextStyle _title1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 18,
     fontWeight: FontWeight.w500,
-    letterSpacing: 0.2);
+    );
 TextStyle _title2 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 20,
     fontWeight: FontWeight.w700,
-    letterSpacing: 0.2);
+    );
 TextStyle _subtitle1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    letterSpacing: 0.1);
+    );
 TextStyle _subtitle2 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w400,
-    letterSpacing: 0.15);
+    );
 
 TextStyle _subtitle3 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w500,
-    letterSpacing: 0.15);
+    );
 TextStyle _subtitle4 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    letterSpacing: 0.2);
+    );
 TextStyle _body1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 16,
     fontWeight: FontWeight.w400,
-    letterSpacing: 0.5);
+    );
 TextStyle _body2 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w400,
-    letterSpacing: 0.25);
+    );
 TextStyle _body3 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w400,
-    letterSpacing: 0.2);
+    );
 TextStyle _caption1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 12,
     fontWeight: FontWeight.w400,
-    letterSpacing: 0.4);
+    );
 TextStyle _caption2 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 12,
     fontWeight: FontWeight.w500,
-    letterSpacing: 0.4);
+    );
 TextStyle _overLine = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 10,
     fontWeight: FontWeight.w400,
-    letterSpacing: 0.5);
+    );
 TextStyle _button1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w600,
     height: 18,
-    letterSpacing: 1);
+    );
 TextStyle _button2 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w400,
     height: 18,
-    letterSpacing: 0.5);
+    );
 TextStyle _button3 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 18,
