@@ -22,5 +22,5 @@ extension AirIntExtension on int {
       );
 
   /// 1, 2 ==> 01, 02
-  String get upper => this > 10 ? '${this}': '0${this}';
+  String get upper => this >= 10 ? '${this}': '0${this}';
 }
