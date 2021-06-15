@@ -4,25 +4,30 @@ import 'dart:ui';
 import 'package:air_extensions/src/extension_config.dart';
 import 'package:flutter/widgets.dart';
 
-extension AirStringExtension on String {
+extension AirStringExtension on String? {
+
+  bool get isEmptyOrNull => this?.isEmpty ?? true;
+
+  String get content => this ?? '';
+
   /// 当前对象是否是Http路径
   bool get isPathHttp =>
-      this.startsWith('http://') || this.startsWith('https://');
+      content.startsWith('http://') || content.startsWith('https://');
 
   /// 当前对象是否是asset路径
-  bool get isPathAsset => startsWith(AirExtConfig.assetPath);
+  bool get isPathAsset => content.startsWith(AirExtConfig.assetPath);
 
   /// 使用image路径为父路径，补全asset路径
-  String get assetPathImg => AirExtConfig.assetImagePath + this;
+  String get assetPathImg => AirExtConfig.assetImagePath + content;
 
   /// 将当前String作为全路径转为File
-  File get asFile => File(this);
+  File get asFile => File(content);
 
   /// 将当前做Uri
-  Uri get asUri => Uri.parse(this);
+  Uri get asUri => Uri.parse(content);
 
   /// convert the string to a Color
-  Color get color => AirHexColor(this);
+  Color get color => AirHexColor(content);
 }
 
 extension AirStringTxtExtension on String {
