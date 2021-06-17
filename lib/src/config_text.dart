@@ -40,10 +40,12 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _h2;
     case TextStyleEnum.h3:
       return _h3;
+    case TextStyleEnum.hint1:
+      return _hint1;
   }
 }
 
-String? _fontFamily = 'Roboto';
+const String _fontFamily = 'Roboto';
 //去掉了所有的字间距
 TextStyle _titleDefault = TextStyle(
     fontFamily: _fontFamily,
@@ -120,8 +122,7 @@ TextStyle _button1 = TextStyle(
 TextStyle _button2 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
-    fontWeight: FontWeight.w400,
-    height: 18,
+    fontWeight: FontWeight.w500,
     );
 TextStyle _button3 = TextStyle(
     fontFamily: _fontFamily,
@@ -143,3 +144,10 @@ TextStyle _h3 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w500,
     height: 27);
+
+const TextStyle _hint1 = const TextStyle(
+  fontFamily: _fontFamily,
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: const Color(0xFFB2B2B2)
+);

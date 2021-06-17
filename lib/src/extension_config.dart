@@ -23,7 +23,8 @@ enum TextStyleEnum {
   button3,
   h1,
   h2,
-  h3
+  h3,
+  hint1
 }
 
 typedef TextStyleFactory = TextStyle Function(TextStyleEnum, int);
@@ -33,24 +34,4 @@ class AirExtConfig {
   static String assetImagePath = assetPath + 'image/';
   static String assetFontPath = assetPath + 'font/';
   static TextStyleFactory textStyleFactory = _defaultTextStyleFactory;
-}
-
-class AirExtension {
-  static void init(
-      {String? assetPath, String? assetImagePath, String? assetFontPath,
-        TextStyleFactory textStyleFactory = _defaultTextStyleFactory}) {
-    if (assetPath?.isNotEmpty ?? false) {
-      AirExtConfig.assetPath = assetPath!;
-    }
-
-    if (assetImagePath?.isNotEmpty ?? false) {
-      AirExtConfig.assetImagePath = assetImagePath!;
-    }
-
-    if (assetFontPath?.isNotEmpty ?? false) {
-      AirExtConfig.assetFontPath = assetFontPath!;
-    }
-
-    AirExtConfig.textStyleFactory = textStyleFactory;
-  }
 }
