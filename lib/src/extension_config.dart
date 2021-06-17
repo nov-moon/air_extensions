@@ -25,6 +25,8 @@ enum TextStyleEnum {
   h1,
   h2,
   h3,
+  hint1
+  h3,
   txt18w700,
   txt10w400,
   txt16w400,
@@ -38,24 +40,4 @@ class AirExtConfig {
   static String assetImagePath = assetPath + 'image/';
   static String assetFontPath = assetPath + 'font/';
   static TextStyleFactory textStyleFactory = _defaultTextStyleFactory;
-}
-
-class AirExtension {
-  static void init(
-      {String? assetPath, String? assetImagePath, String? assetFontPath,
-        TextStyleFactory textStyleFactory = _defaultTextStyleFactory}) {
-    if (assetPath?.isNotEmpty ?? false) {
-      AirExtConfig.assetPath = assetPath!;
-    }
-
-    if (assetImagePath?.isNotEmpty ?? false) {
-      AirExtConfig.assetImagePath = assetImagePath!;
-    }
-
-    if (assetFontPath?.isNotEmpty ?? false) {
-      AirExtConfig.assetFontPath = assetFontPath!;
-    }
-
-    AirExtConfig.textStyleFactory = textStyleFactory;
-  }
 }

@@ -8,26 +8,26 @@ extension AirStringExtension on String? {
 
   bool get isEmptyOrNull => this?.isEmpty ?? true;
 
-  String get content => this ?? '';
+  String get value => this ?? '';
 
   /// 当前对象是否是Http路径
   bool get isPathHttp =>
-      content.startsWith('http://') || content.startsWith('https://');
+      value.startsWith('http://') || value.startsWith('https://');
 
   /// 当前对象是否是asset路径
-  bool get isPathAsset => content.startsWith(AirExtConfig.assetPath);
+  bool get isPathAsset => value.startsWith(AirExtConfig.assetPath);
 
   /// 使用image路径为父路径，补全asset路径
-  String get assetPathImg => AirExtConfig.assetImagePath + content;
+  String get assetPathImg => AirExtConfig.assetImagePath + value;
 
   /// 将当前String作为全路径转为File
-  File get asFile => File(content);
+  File get asFile => File(value);
 
   /// 将当前做Uri
-  Uri get asUri => Uri.parse(content);
+  Uri get asUri => Uri.parse(value);
 
   /// convert the string to a Color
-  Color get color => AirHexColor(content);
+  Color get color => AirHexColor(value);
 }
 
 extension AirStringTxtExtension on String {
@@ -267,6 +267,16 @@ extension AirStringTxtExtension on String {
   }) {
     return _txt(color, textStyle, TextStyleEnum.h3, type, softWrap, overflow);
   }
+
+  Text txtHint1({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+}){
+    return _txt(color, textStyle, TextStyleEnum.hint1, type, softWrap, overflow);
+}
 
   /// Text 18 w700 ..  height:22
   Text txt18w700({
