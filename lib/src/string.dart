@@ -240,6 +240,18 @@ extension AirStringTxtExtension on String {
     return _txt(color, textStyle, TextStyleEnum.h2, type, softWrap, overflow);
   }
 
+  /// Text 14 w700 height:18
+  Text txt14w700({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt14w700, type, softWrap, overflow);
+  }
+
   /// Text 20 w500 ..  height:27
   Text txtH3({
     Color? color,
@@ -249,6 +261,54 @@ extension AirStringTxtExtension on String {
     TextOverflow? overflow,
   }) {
     return _txt(color, textStyle, TextStyleEnum.h3, type, softWrap, overflow);
+  }
+
+  /// Text 18 w700 ..  height:22
+  Text txt18w700({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt18w700, type, softWrap, overflow);
+  }
+
+  /// Text 10 w400 ..  height:12
+  Text txt10w400({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt10w400, type, softWrap, overflow);
+  }
+
+  /// Text 16 w400 ..  height:19
+  Text txt16w400({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt16w400, type, softWrap, overflow);
+  }
+
+  /// Text 18 w400 ..  height:24
+  Text txt18w400({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt18w400, type, softWrap, overflow);
   }
 
   Text txt({
