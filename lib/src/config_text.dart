@@ -129,13 +129,9 @@ TextStyle _button1 = TextStyle(
   fontWeight: FontWeight.w600,
 );
 TextStyle _button2 = TextStyle(
-    fontFamily: _fontFamily,
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-    );
   fontFamily: _fontFamily,
   fontSize: 14,
-  fontWeight: FontWeight.w400,
+  fontWeight: FontWeight.w500,
 );
 TextStyle _button3 = TextStyle(
   fontFamily: _fontFamily,
@@ -184,8 +180,7 @@ TextStyle _txt18w400 = TextStyle(
 );
 
 const TextStyle _hint1 = const TextStyle(
-  fontFamily: _fontFamily,
-  fontSize: 14,
-  fontWeight: FontWeight.w400,
-  color: const Color(0xFFB2B2B2)
-);
+    fontFamily: _fontFamily,
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: const Color(0xFFB2B2B2));

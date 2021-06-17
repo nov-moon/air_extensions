@@ -5,7 +5,6 @@ import 'package:air_extensions/src/extension_config.dart';
 import 'package:flutter/widgets.dart';
 
 extension AirStringExtension on String? {
-
   bool get isEmptyOrNull => this?.isEmpty ?? true;
 
   String get value => this ?? '';
@@ -274,9 +273,10 @@ extension AirStringTxtExtension on String {
     TextStyle? textStyle,
     bool softWrap = true,
     TextOverflow? overflow,
-}){
-    return _txt(color, textStyle, TextStyleEnum.hint1, type, softWrap, overflow);
-}
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.hint1, type, softWrap, overflow);
+  }
 
   /// Text 18 w700 ..  height:22
   Text txt18w700({
