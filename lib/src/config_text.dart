@@ -52,6 +52,10 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _txt16w400;
     case TextStyleEnum.txt18w400:
       return _txt18w400;
+    case TextStyleEnum.txt16w700:
+      return _txt16w700;
+    case TextStyleEnum.txt14w400:
+      return _txt14w400;
   }
 }
 
@@ -178,7 +182,16 @@ TextStyle _txt18w400 = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.w400,
 );
-
+TextStyle _txt16w700 = TextStyle(
+  fontFamily: _fontFamily,
+  fontSize: 16,
+  fontWeight: FontWeight.w700,
+);
+TextStyle _txt14w400 = TextStyle(
+  fontFamily: _fontFamily,
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+);
 const TextStyle _hint1 = const TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,

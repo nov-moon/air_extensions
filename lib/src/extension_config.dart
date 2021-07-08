@@ -30,6 +30,8 @@ enum TextStyleEnum {
   txt10w400,
   txt16w400,
   txt18w400,
+  txt16w700,
+  txt14w400,
 }
 
 typedef TextStyleFactory = TextStyle Function(TextStyleEnum, int);
