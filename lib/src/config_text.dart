@@ -56,7 +56,11 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _txt16w700;
     case TextStyleEnum.txt14w400:
       return _txt14w400;
+    case TextStyleEnum.icon1:
+      // TODO: Handle this case.
+      break;
   }
+  return _titleDefault;
 }
 
 const String _fontFamily = 'Roboto';
