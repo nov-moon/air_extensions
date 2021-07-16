@@ -338,6 +338,18 @@ extension AirStringTxtExtension on String {
         color, textStyle, TextStyleEnum.txt16w700, type, softWrap, overflow);
   }
 
+  /// Text 16 w500 ..
+  Text txt16w500({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt16w500, type, softWrap, overflow);
+  }
+
   /// Text 14 w400 ..
   Text txt14w400({
     Color? color,
@@ -348,6 +360,18 @@ extension AirStringTxtExtension on String {
   }) {
     return _txt(
         color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow);
+  }
+
+  /// Text 14 w500 ..
+  Text txt14w500({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt14w500, type, softWrap, overflow);
   }
   /// Text 12 w400 ..
   Text txt12w400({
