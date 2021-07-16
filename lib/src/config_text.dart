@@ -56,6 +56,8 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _txt16w700;
     case TextStyleEnum.txt14w400:
       return _txt14w400;
+    case TextStyleEnum.txt12w400:
+      return _txt12w400;
     case TextStyleEnum.icon1:
       // TODO: Handle this case.
       break;
@@ -194,6 +196,12 @@ TextStyle _txt16w700 = TextStyle(
 TextStyle _txt14w400 = TextStyle(
   fontFamily: _fontFamily,
   fontSize: 14,
+  fontWeight: FontWeight.w400,
+);
+
+const TextStyle _txt12w400 = TextStyle(
+  fontFamily: _fontFamily,
+  fontSize: 12,
   fontWeight: FontWeight.w400,
 );
 const TextStyle _hint1 = const TextStyle(

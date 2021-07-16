@@ -349,6 +349,17 @@ extension AirStringTxtExtension on String {
     return _txt(
         color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow);
   }
+  /// Text 12 w400 ..
+  Text txt12w400({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow);
+  }
 
   Text txt({
     Color? color,
