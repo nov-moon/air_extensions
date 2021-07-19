@@ -31,6 +31,7 @@ enum TextStyleEnum {
   txt16w400,
   txt18w400,
   txt16w700,
+  txt16w500,
   txt14w400,
   txt14w500,
   txt12w400,
