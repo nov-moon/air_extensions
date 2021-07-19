@@ -65,8 +65,6 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       break;
     case TextStyleEnum.txt16w500:
       return _txt16w500;
-    case TextStyleEnum.txt14w500:
-      return _txt14w500;
   }
   return _titleDefault;
 }
@@ -219,12 +217,6 @@ const TextStyle _txt12w400 = TextStyle(
 const TextStyle _txt16w500 = TextStyle(
   fontFamily: _fontFamily,
   fontSize: 16,
-  fontWeight: FontWeight.w500,
-);
-
-const TextStyle _txt14w500 = TextStyle(
-  fontFamily: _fontFamily,
-  fontSize: 14,
   fontWeight: FontWeight.w500,
 );
 
