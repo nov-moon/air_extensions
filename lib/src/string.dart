@@ -27,6 +27,12 @@ extension AirStringExtension on String? {
 
   /// convert the string to a Color
   Color get color => AirHexColor(value);
+
+  /// 当前对象是否是邮箱
+  bool get isEmail {
+    RegExp emailReg = new RegExp("[[A-z0-9_-]+\\@[A-z0-9]+\\.[A-z]+");
+    return emailReg.hasMatch(value);
+  }
 }
 
 extension AirStringTxtExtension on String {

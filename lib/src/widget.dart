@@ -28,6 +28,16 @@ extension AirWidgetExtension on Widget {
             ));
   }
 
+  ///没有水波纹效果
+  Widget onGestureDetectorTap(void onTap()){
+    return fixWidget(
+        this,
+            (child) => GestureDetector(
+          child: child,
+          onTap: onTap,
+        ));
+  }
+
   Widget background(Color color) {
     return fixWidget(
         this,
