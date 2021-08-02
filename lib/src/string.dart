@@ -365,7 +365,7 @@ extension AirStringTxtExtension on String {
     TextOverflow? overflow,
   }) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt14w500, type, softWrap, overflow);
+        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow);
   }
 
   /// Text 14 w500 ..
@@ -377,7 +377,7 @@ extension AirStringTxtExtension on String {
     TextOverflow? overflow,
   }) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow);
+        color, textStyle, TextStyleEnum.txt14w500, type, softWrap, overflow);
   }
 
   /// Text 12 w400 ..
