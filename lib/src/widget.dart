@@ -117,6 +117,11 @@ extension AirWidgetExtension on Widget {
         this, (child) => DecoratedBox(decoration: decoration, child: child));
   }
 
+  Widget clipRoundRect(double radius){
+    return ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(radius)), child: this);
+  }
+
   WidgetExtensionModel toTap(void onTap()) {
     var m = WidgetExtensionModel();
     m.child = this;
