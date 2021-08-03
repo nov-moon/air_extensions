@@ -22,5 +22,28 @@ extension AirIntExtension on int {
       );
 
   /// 1, 2 ==> 01, 02
-  String get upper => this >= 10 ? '${this}': '0${this}';
+  String get upper => this >= 10 ? '${this}' : '0${this}';
+
+  String upperTo(int count) {
+    String stringValue = this.toString();
+    int decimalCount = stringValue.length;
+    for (int i = 0; i < count - decimalCount; i++) {
+      stringValue = '0$stringValue';
+    }
+
+    return stringValue;
+  }
+
+  /// 248590 ===> '248,590'
+  String get formattedString {
+    int low = (this % 1000);
+    int high = this ~/ 1000;
+    String result;
+    if (high > 0) {
+      result = '${high.formattedString},${low.upperTo(3)}';
+    } else {
+      result = low.toString();
+    }
+    return result;
+  }
 }
