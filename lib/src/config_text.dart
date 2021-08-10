@@ -62,6 +62,8 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _txt14w500;
     case TextStyleEnum.txt13w700:
       return _txt13w700;
+    case TextStyleEnum.txt13w500:
+      return _txt13w500;
     case TextStyleEnum.txt12w700:
       return _txt12w700;
     case TextStyleEnum.txt12w400:
@@ -224,6 +226,11 @@ TextStyle _txt13w700 = TextStyle(
   fontFamily: _fontFamily,
   fontSize: 13,
   fontWeight: FontWeight.w700,
+);
+TextStyle _txt13w500 = TextStyle(
+  fontFamily: _fontFamily,
+  fontSize: 13,
+  fontWeight: FontWeight.w500,
 );
 TextStyle _txt12w700 = TextStyle(
   fontFamily: _fontFamily,

@@ -428,6 +428,18 @@ extension AirStringTxtExtension on String {
         color, textStyle, TextStyleEnum.txt13w700, type, softWrap, overflow);
   }
 
+  /// Text 13 w500 ..
+  Text txt13w500({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt13w500, type, softWrap, overflow);
+  }
+
   /// Text 12 w700 ..
   Text txt12w700({
     Color? color,
