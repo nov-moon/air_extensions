@@ -36,11 +36,15 @@ extension AirIntExtension on int {
 
   /// 248590 ===> '248,590'
   String get formattedString {
+    return formatString();
+  }
+
+  String formatString({String? separator}) {
     int low = (this % 1000);
     int high = this ~/ 1000;
     String result;
     if (high > 0) {
-      result = '${high.formattedString},${low.upperTo(3)}';
+      result = '${high.formattedString}${separator ?? ','}${low.upperTo(3)}';
     } else {
       result = low.toString();
     }
