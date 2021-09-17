@@ -1,5 +1,6 @@
 import 'package:air_extensions/src/string.dart';
 import 'package:air_extensions/src/util/utils.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -28,14 +29,29 @@ extension AirWidgetExtension on Widget {
             ));
   }
 
+  Widget shadow({Color? bgColor}) {
+    BoxDecoration decoration =
+        BoxDecoration(color: bgColor ?? Colors.white, boxShadow: [
+      BoxShadow(
+          offset: Offset(0, -1),
+          color: Color.fromRGBO(0, 60, 117, 0.09),
+          blurRadius: 4.0, //阴影模糊程度
+          spreadRadius: 0.1)
+    ]);
+    return Container(
+      decoration: decoration,
+      child: this,
+    );
+  }
+
   ///没有水波纹效果
-  Widget onGestureDetectorTap(void onTap()){
+  Widget onGestureDetectorTap(void onTap()) {
     return fixWidget(
         this,
-            (child) => GestureDetector(
-          child: child,
-          onTap: onTap,
-        ));
+        (child) => GestureDetector(
+              child: child,
+              onTap: onTap,
+            ));
   }
 
   Widget background(Color color) {
@@ -117,7 +133,7 @@ extension AirWidgetExtension on Widget {
         this, (child) => DecoratedBox(decoration: decoration, child: child));
   }
 
-  Widget clipRoundRect(double radius){
+  Widget clipRoundRect(double radius) {
     return ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(radius)), child: this);
   }
