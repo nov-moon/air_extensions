@@ -40,7 +40,7 @@ enum TextStyleEnum {
   txt12w700,
   txt12w400,
   txt12w500,
-  icon1,
+  txt11w400,
 }
 
 typedef TextStyleFactory = TextStyle Function(TextStyleEnum, int);
@@ -50,4 +50,8 @@ class AirExtConfig {
   static String assetImagePath = assetPath + 'image/';
   static String assetFontPath = assetPath + 'font/';
   static TextStyleFactory textStyleFactory = _defaultTextStyleFactory;
+
+  static void setFontFamily(String fontFamily){
+    defaultFontFamily = fontFamily;
+  }
 }

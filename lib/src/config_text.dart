@@ -70,16 +70,18 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
       return _txt12w400;
     case TextStyleEnum.txt12w500:
       return _txt12w500;
-    case TextStyleEnum.icon1:
-      // TODO: Handle this case.
-      break;
     case TextStyleEnum.txt16w500:
       return _txt16w500;
+    case TextStyleEnum.txt11w400:
+      return _txt11w400;
+    default:
+      return _titleDefault;
   }
-  return _titleDefault;
 }
 
-const String _fontFamily = 'Roboto';
+String _fontFamily = 'Roboto';
+set defaultFontFamily(String value) => _fontFamily = value;
+
 //去掉了所有的字间距
 TextStyle _titleDefault = TextStyle(
   fontFamily: _fontFamily,
@@ -192,6 +194,11 @@ TextStyle _txt10w400 = TextStyle(
   fontSize: 10,
   fontWeight: FontWeight.w400,
 );
+TextStyle _txt11w400 = TextStyle(
+  fontFamily: _fontFamily,
+  fontSize: 11,
+  fontWeight: FontWeight.w400,
+);
 TextStyle _txt16w400 = TextStyle(
   fontFamily: _fontFamily,
   fontSize: 16,
@@ -237,25 +244,26 @@ TextStyle _txt12w700 = TextStyle(
   fontSize: 12,
   fontWeight: FontWeight.w700,
 );
-const TextStyle _txt12w400 = TextStyle(
+
+TextStyle _txt12w400 = TextStyle(
   fontFamily: _fontFamily,
   fontSize: 12,
   fontWeight: FontWeight.w400,
 );
 
-const TextStyle _txt12w500 = TextStyle(
+TextStyle _txt12w500 = TextStyle(
   fontFamily: _fontFamily,
   fontSize: 12,
   fontWeight: FontWeight.w500,
 );
 
-const TextStyle _txt16w500 = TextStyle(
+TextStyle _txt16w500 = TextStyle(
   fontFamily: _fontFamily,
   fontSize: 16,
   fontWeight: FontWeight.w500,
 );
 
-const TextStyle _hint1 = const TextStyle(
+TextStyle _hint1 = TextStyle(
     fontFamily: _fontFamily,
     fontSize: 14,
     fontWeight: FontWeight.w400,

@@ -381,39 +381,60 @@ extension AirStringTxtExtension on String {
   }
 
   /// Text 14 w500 ..
-  Text txt14w500({
-    Color? color,
-    int type = 0,
-    TextStyle? textStyle,
-    bool softWrap = true,
-    TextOverflow? overflow,
-  }) {
+  Text txt14w500(
+      {Color? color,
+      int type = 0,
+      TextStyle? textStyle,
+      bool softWrap = true,
+      TextOverflow? overflow,
+      int? maxLines,
+      String? fontFamily}) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt14w500, type, softWrap, overflow);
+        color, textStyle, TextStyleEnum.txt14w500, type, softWrap, overflow,
+        maxLines: maxLines,
+    fontFamily: fontFamily);
+  }
+  /// Text 14 w500 ..
+  Text txt11w400(
+      {Color? color,
+      int type = 0,
+      TextStyle? textStyle,
+      bool softWrap = true,
+      TextOverflow? overflow,
+      int? maxLines,
+      String? fontFamily}) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt11w400, type, softWrap, overflow,
+        maxLines: maxLines,
+    fontFamily: fontFamily);
   }
 
   /// Text 12 w400 ..
-  Text txt12w400({
-    Color? color,
-    int type = 0,
-    TextStyle? textStyle,
-    bool softWrap = true,
-    TextOverflow? overflow,
-  }) {
+  Text txt12w400(
+      {Color? color,
+      int type = 0,
+      TextStyle? textStyle,
+      bool softWrap = true,
+      TextOverflow? overflow,
+      TextAlign? textAlign,
+      double? height,
+      int? maxLines}) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt12w400, type, softWrap, overflow);
+        color, textStyle, TextStyleEnum.txt12w400, type, softWrap, overflow,
+        height: height, maxLines: maxLines);
   }
 
   /// Text 12 w500 ..
-  Text txt12w500({
-    Color? color,
-    int type = 0,
-    TextStyle? textStyle,
-    bool softWrap = true,
-    TextOverflow? overflow,
-  }) {
+  Text txt12w500(
+      {Color? color,
+      int type = 0,
+      TextStyle? textStyle,
+      bool softWrap = true,
+      TextOverflow? overflow,
+      int? maxLines}) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt12w500, type, softWrap, overflow);
+        color, textStyle, TextStyleEnum.txt12w500, type, softWrap, overflow,
+        maxLines: maxLines);
   }
 
   /// Text 13 w700 ..
@@ -488,18 +509,21 @@ extension AirStringTxtExtension on String {
     TextStyleEnum e,
     int type,
     bool softWrap,
-    TextOverflow? overflow,
-  ) {
+    TextOverflow? overflow, {
+    int? maxLines,
+    TextAlign? textAlign,
+    double? height,
+    String? fontFamily,
+  }) {
     var style = textStyle ?? AirExtConfig.textStyleFactory(e, type);
-    if (color != null) {
-      style = style.copyWith(color: color);
-    }
-    var widget = Text(
-      this,
-      style: style,
-      softWrap: softWrap,
-      overflow: overflow,
-    );
+    style =
+        style.copyWith(color: color, height: height, fontFamily: fontFamily);
+    var widget = Text(this,
+        style: style,
+        softWrap: softWrap,
+        overflow: overflow,
+        maxLines: maxLines,
+        textAlign: textAlign);
 
     return widget;
   }
