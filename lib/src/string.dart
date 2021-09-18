@@ -410,6 +410,21 @@ extension AirStringTxtExtension on String {
     fontFamily: fontFamily);
   }
 
+  /// Text 14 w500 ..
+  Text txt11w500(
+      {Color? color,
+        int type = 0,
+        TextStyle? textStyle,
+        bool softWrap = true,
+        TextOverflow? overflow,
+        int? maxLines,
+        String? fontFamily}) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt11w500, type, softWrap, overflow,
+        maxLines: maxLines,
+        fontFamily: fontFamily);
+  }
+
   /// Text 12 w400 ..
   Text txt12w400(
       {Color? color,
