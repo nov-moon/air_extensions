@@ -375,9 +375,10 @@ extension AirStringTxtExtension on String {
     TextStyle? textStyle,
     bool softWrap = true,
     TextOverflow? overflow,
+    int? maxLines
   }) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow);
+        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow,maxLines: maxLines);
   }
 
   /// Text 14 w500 ..
