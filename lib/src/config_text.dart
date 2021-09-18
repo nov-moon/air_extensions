@@ -81,6 +81,7 @@ TextStyle _defaultTextStyleFactory(TextStyleEnum e, int type) {
 
 String _fontFamily = 'Roboto';
 set defaultFontFamily(String value) => _fontFamily = value;
+String get defaultFontFamily => _fontFamily;
 
 //去掉了所有的字间距
 TextStyle _titleDefault = TextStyle(

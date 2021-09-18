@@ -54,4 +54,8 @@ class AirExtConfig {
   static void setFontFamily(String fontFamily){
     defaultFontFamily = fontFamily;
   }
+
+  static String getDefaultFontFamily(){
+    return defaultFontFamily;
+  }
 }
