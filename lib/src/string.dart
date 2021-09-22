@@ -437,7 +437,7 @@ extension AirStringTxtExtension on String {
       int? maxLines}) {
     return _txt(
         color, textStyle, TextStyleEnum.txt12w400, type, softWrap, overflow,
-        height: height, maxLines: maxLines);
+        height: height, maxLines: maxLines, textAlign: textAlign);
   }
 
   /// Text 12 w500 ..
