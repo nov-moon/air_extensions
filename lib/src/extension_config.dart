@@ -30,6 +30,7 @@ enum TextStyleEnum {
   txt10w400,
   txt16w400,
   txt18w400,
+  txt18w500,
   txt16w900,
   txt16w700,
   txt16w500,
@@ -52,11 +53,11 @@ class AirExtConfig {
   static String assetFontPath = assetPath + 'font/';
   static TextStyleFactory textStyleFactory = _defaultTextStyleFactory;
 
-  static void setFontFamily(String fontFamily){
+  static void setFontFamily(String fontFamily) {
     defaultFontFamily = fontFamily;
   }
 
-  static String getDefaultFontFamily(){
+  static String getDefaultFontFamily() {
     return defaultFontFamily;
   }
 }

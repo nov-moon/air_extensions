@@ -332,6 +332,18 @@ extension AirStringTxtExtension on String {
         color, textStyle, TextStyleEnum.txt18w400, type, softWrap, overflow);
   }
 
+  /// Text 18 w500 ..  height:24
+  Text txt18w500({
+    Color? color,
+    int type = 0,
+    TextStyle? textStyle,
+    bool softWrap = true,
+    TextOverflow? overflow,
+  }) {
+    return _txt(
+        color, textStyle, TextStyleEnum.txt18w500, type, softWrap, overflow);
+  }
+
   /// Text 16 w700 ..
   Text txt16w900({
     Color? color,
@@ -369,18 +381,17 @@ extension AirStringTxtExtension on String {
   }
 
   /// Text 14 w400 ..
-  Text txt14w400({
-    Color? color,
-    int type = 0,
-    TextStyle? textStyle,
-    bool softWrap = true,
-    TextOverflow? overflow,
-    TextAlign? textAlign,
-    int? maxLines
-  }) {
+  Text txt14w400(
+      {Color? color,
+      int type = 0,
+      TextStyle? textStyle,
+      bool softWrap = true,
+      TextOverflow? overflow,
+      TextAlign? textAlign,
+      int? maxLines}) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow,maxLines: maxLines,
-    textAlign: textAlign);
+        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow,
+        maxLines: maxLines, textAlign: textAlign);
   }
 
   /// Text 14 w500 ..
@@ -394,9 +405,9 @@ extension AirStringTxtExtension on String {
       String? fontFamily}) {
     return _txt(
         color, textStyle, TextStyleEnum.txt14w500, type, softWrap, overflow,
-        maxLines: maxLines,
-    fontFamily: fontFamily);
+        maxLines: maxLines, fontFamily: fontFamily);
   }
+
   /// Text 14 w500 ..
   Text txt11w400(
       {Color? color,
@@ -408,23 +419,21 @@ extension AirStringTxtExtension on String {
       String? fontFamily}) {
     return _txt(
         color, textStyle, TextStyleEnum.txt11w400, type, softWrap, overflow,
-        maxLines: maxLines,
-    fontFamily: fontFamily);
+        maxLines: maxLines, fontFamily: fontFamily);
   }
 
   /// Text 14 w500 ..
   Text txt11w500(
       {Color? color,
-        int type = 0,
-        TextStyle? textStyle,
-        bool softWrap = true,
-        TextOverflow? overflow,
-        int? maxLines,
-        String? fontFamily}) {
+      int type = 0,
+      TextStyle? textStyle,
+      bool softWrap = true,
+      TextOverflow? overflow,
+      int? maxLines,
+      String? fontFamily}) {
     return _txt(
         color, textStyle, TextStyleEnum.txt11w500, type, softWrap, overflow,
-        maxLines: maxLines,
-        fontFamily: fontFamily);
+        maxLines: maxLines, fontFamily: fontFamily);
   }
 
   /// Text 12 w400 ..
