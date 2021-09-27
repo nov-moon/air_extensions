@@ -363,9 +363,10 @@ extension AirStringTxtExtension on String {
     TextStyle? textStyle,
     bool softWrap = true,
     TextOverflow? overflow,
+    double? height,
   }) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt16w500, type, softWrap, overflow);
+        color, textStyle, TextStyleEnum.txt16w500, type, softWrap, overflow,height: height);
   }
 
   /// Text 14 w400 ..
