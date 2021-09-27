@@ -366,7 +366,8 @@ extension AirStringTxtExtension on String {
     double? height,
   }) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt16w500, type, softWrap, overflow,height: height);
+        color, textStyle, TextStyleEnum.txt16w500, type, softWrap, overflow,
+        height: height);
   }
 
   /// Text 14 w400 ..
@@ -377,11 +378,12 @@ extension AirStringTxtExtension on String {
     bool softWrap = true,
     TextOverflow? overflow,
     TextAlign? textAlign,
-    int? maxLines
+    int? maxLines,
+    double? height,
   }) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow,maxLines: maxLines,
-    textAlign: textAlign);
+        color, textStyle, TextStyleEnum.txt14w400, type, softWrap, overflow,
+        maxLines: maxLines, height: height, textAlign: textAlign);
   }
 
   /// Text 14 w500 ..
@@ -395,9 +397,9 @@ extension AirStringTxtExtension on String {
       String? fontFamily}) {
     return _txt(
         color, textStyle, TextStyleEnum.txt14w500, type, softWrap, overflow,
-        maxLines: maxLines,
-    fontFamily: fontFamily);
+        maxLines: maxLines, fontFamily: fontFamily);
   }
+
   /// Text 14 w500 ..
   Text txt11w400(
       {Color? color,
@@ -409,23 +411,21 @@ extension AirStringTxtExtension on String {
       String? fontFamily}) {
     return _txt(
         color, textStyle, TextStyleEnum.txt11w400, type, softWrap, overflow,
-        maxLines: maxLines,
-    fontFamily: fontFamily);
+        maxLines: maxLines, fontFamily: fontFamily);
   }
 
   /// Text 14 w500 ..
   Text txt11w500(
       {Color? color,
-        int type = 0,
-        TextStyle? textStyle,
-        bool softWrap = true,
-        TextOverflow? overflow,
-        int? maxLines,
-        String? fontFamily}) {
+      int type = 0,
+      TextStyle? textStyle,
+      bool softWrap = true,
+      TextOverflow? overflow,
+      int? maxLines,
+      String? fontFamily}) {
     return _txt(
         color, textStyle, TextStyleEnum.txt11w500, type, softWrap, overflow,
-        maxLines: maxLines,
-        fontFamily: fontFamily);
+        maxLines: maxLines, fontFamily: fontFamily);
   }
 
   /// Text 12 w400 ..
