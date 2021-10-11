@@ -257,9 +257,11 @@ extension AirStringTxtExtension on String {
     TextStyle? textStyle,
     bool softWrap = true,
     TextOverflow? overflow,
+    TextAlign? textAlign,
   }) {
     return _txt(
-        color, textStyle, TextStyleEnum.txt14w700, type, softWrap, overflow);
+        color, textStyle, TextStyleEnum.txt14w700, type, softWrap, overflow,
+        textAlign: textAlign);
   }
 
   /// Text 20 w500 ..  height:27
