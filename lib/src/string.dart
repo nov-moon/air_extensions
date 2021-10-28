@@ -550,6 +550,7 @@ extension AirStringTxtExtension on String {
     TextAlign? textAlign,
     double? height,
     String? fontFamily,
+    double?  textScaleFactor= 1.0,
   }) {
     var style = textStyle ?? AirExtConfig.textStyleFactory(e, type);
     style =
@@ -559,6 +560,7 @@ extension AirStringTxtExtension on String {
         softWrap: softWrap,
         overflow: overflow,
         maxLines: maxLines,
+        textScaleFactor: textScaleFactor,
         textAlign: textAlign);
 
     return widget;
