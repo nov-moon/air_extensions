@@ -26,6 +26,7 @@ enum TextStyleEnum {
   h2,
   h3,
   hint1,
+  txt20w700,
   txt18w700,
   txt10w400,
   txt16w400,
