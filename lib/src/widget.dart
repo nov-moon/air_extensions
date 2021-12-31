@@ -133,9 +133,21 @@ extension AirWidgetExtension on Widget {
         this, (child) => DecoratedBox(decoration: decoration, child: child));
   }
 
-  Widget clipRoundRect(double radius) {
-    return ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(radius)), child: this);
+  Widget clipRoundRect(double radius,
+      {bool topOnly = false,
+      bool bottomOnly = false,
+      bool leftOnly = false,
+      bool rightOnly = false}) {
+    BorderRadius borderRadius = topOnly
+        ? BorderRadius.vertical(top: Radius.circular(radius))
+        : bottomOnly
+            ? BorderRadius.vertical(bottom: Radius.circular(radius))
+            : leftOnly
+                ? BorderRadius.horizontal(left: Radius.circular(radius))
+                : rightOnly
+                    ? BorderRadius.horizontal(right: Radius.circular(radius))
+                    : BorderRadius.all(Radius.circular(radius));
+    return ClipRRect(borderRadius: borderRadius, child: this);
   }
 
   WidgetExtensionModel toTap(void onTap()) {
