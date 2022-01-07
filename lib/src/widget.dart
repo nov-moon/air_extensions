@@ -120,10 +120,11 @@ extension AirWidgetExtension on Widget {
       {double? width, double? radius, bool isFill = false}) {
     var c = color.color;
     var border = RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(radius ?? 4.0)),
         side: BorderSide(
-      width: width ?? 1,
-      color: c,
-    ));
+          width: width ?? 1,
+          color: c,
+        ));
     var decoration = ShapeDecoration(
       shape: border,
       color: isFill ? c : null,
